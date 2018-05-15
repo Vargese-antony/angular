@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <h4>User Feeds</h4>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list *ngFor="let feed of feeds">
+        <mat-list-item>
+          {{feed}}
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>

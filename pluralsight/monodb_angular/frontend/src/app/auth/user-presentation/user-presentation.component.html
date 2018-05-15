@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h4>{{(loginForm)?"Log in":"Register new user"}}</h4>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input [(ngModel)]="userData.email" name="email" matInput placeholder="email" type="email" />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input [(ngModel)]="userData.password" name="password" matInput placeholder="password" type="password" />
+      </mat-form-field>
+      
+      <div *ngIf="!loginForm">
+        <mat-form-field class="example-full-width">
+          <input [(ngModel)]="userData.name" name="name" matInput placeholder="name" />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <textarea [(ngModel)]="userData.description" name="description" matInput placeholder="description">
+        </textarea>
+        </mat-form-field>
+      </div>
+      
+      <button (click)="onLoginRegister()" mat-raised-button color="primary">{{(loginForm)?"Login":"Register"}}</button>
+    </form>
+  </mat-card-content>
+</mat-card>

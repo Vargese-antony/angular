@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h4>Users List</h4>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-nav-list *ngFor="let user of users">
+      <a mat-list-item (click)="onUserItemSelected(user)">
+        {{user.name}}
+      </a>
+    </mat-nav-list>
+  </mat-card-content>
+</mat-card>
