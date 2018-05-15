@@ -1,0 +1,64 @@
+<div class="container">
+  <!--<h3>Employee Forms</h3>
+  <form #form="ngForm" (submit)="onFormSubmit(form)" novalidate>
+    <div class="form-group" [class.has-error]="firstName.invalid && firstName.touched">
+      <label class="control-label">First Name</label>
+      <input #firstName="ngModel" class="form-control" type="text" name="firstName" required [(ngModel)]="model.firstName">
+      <div *ngIf="firstName.invalid && firstName.touched" class="alert alert-danger">
+        First Name is required
+      </div>
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input #lastName="ngModel" class="form-control" type="text" name="lastName" required [(ngModel)]="model.lastName">
+        <div *ngIf="lastName.invalid && lastName.touched" class="alert alert-danger">
+          Last Name is required
+        </div>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="isFullTime" [(ngModel)]="model.isFullTime">Full time employee
+      </label>
+    </div>
+    <label>Payment Type</label>
+    <div class="radio">
+      <label>
+        <input type="radio" name="paymentType" value="W2" [(ngModel)]="model.paymentType" checked>
+        W2
+      </label>
+    </div>
+    <div class="radio">
+        <label>
+          <input type="radio" name="paymentType" value="1099" [(ngModel)]="model.paymentType">
+          1099
+        </label>
+      </div>
+      <div class="form-group" [class.has-error]="hasPrimaryLanguageError">
+        <label class="control-label">Primary Language</label>
+        <select class="form-control" #primaryLanguage
+          name="language" [(ngModel)]="model.language" 
+          (blur)="validatePrimaryLanguage(primaryLanguage.value)"
+          (change)="validatePrimaryLanguage(primaryLanguage.value)">
+          <option value="default">Select a language...</option>
+          <option *ngFor="let language of languages">
+            {{language}}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Date selection</label>
+        <input type="date" class="form-control">
+      </div>
+    <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Ok</button>
+  </form> -->
+  <app-controls></app-controls>
+</div>
+<!--{{form.pristine}}
+Model : {{model | json}}
+<br>
+Angular : {{form.value | json}}
+
+
+<h3>Classes</h3>
+<h4>{{ firstName.className }}</h4>
+-->
